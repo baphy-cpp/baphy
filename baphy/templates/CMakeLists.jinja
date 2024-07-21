@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.30)
+
+project(
+    {{ project_name }}
+    VERSION 0.1.0
+    {% if project_description %}
+    DESCRIPTION {{ project_description }}
+    {% endif %}
+    LANGUAGES CXX
+)

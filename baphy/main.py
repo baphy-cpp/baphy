@@ -1,2 +1,7 @@
+from typer import run
+
+from .src.facade import main
+
+
 def cli():
-    print("hi")
+    run(main)
