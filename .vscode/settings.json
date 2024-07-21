@@ -15,7 +15,8 @@
     "baphy/src/queries/__pycache__": true,
     "baphy/src/queries/__init__.py": true,
     "tests/tests_queries/tests_project_info/__pycache__": true,
-    "tests/test_example/__pycache__": true
+    "tests/test_example/__pycache__": true,
+    ".pytest_cache": true
   },
   "hide-files.files": [
     "baphy/__init__.py",
@@ -27,7 +28,8 @@
     "baphy/src/queries/__pycache__",
     "baphy/src/queries/__init__.py",
     "tests/tests_queries/tests_project_info/__pycache__",
-    "tests/test_example/__pycache__"
+    "tests/test_example/__pycache__",
+    ".pytest_cache"
   ],
   "python.analysis.extraPaths": [
     "./baphy/src",

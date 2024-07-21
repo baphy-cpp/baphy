@@ -1,7 +1,7 @@
-import pathlib
-from typing import Optional
+# FIXME: I am probably against disabling linters but I am too lazy for now
+# pylint: disable=relative-beyond-top-level
 
-from rich import print
+
 import typer
 from typing_extensions import Annotated
 

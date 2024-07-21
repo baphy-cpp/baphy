@@ -1,6 +1,14 @@
-from rich import print
+"""
+Module contains functions for greeting user
+"""
+
+import rich
 
 
 def welcome():
+    """
+    Rich-print welcoming message
+    """
+
     # TODO: Welcoming message
-    print("[u cyan]Welcome[/]")
+    rich.print("[u cyan]Welcome[/]")

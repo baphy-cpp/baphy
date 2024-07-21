@@ -1,6 +1,6 @@
 ### Doesn't work ATM
 
-import baphy.main
+# import baphy.main
 
 
 def test_something():

@@ -60,7 +60,7 @@ def test_expect_fail_with_wrong_start(test_text):
     "test_char",
     list("!@#$%^&*()+?=,<>/\"'"),
 )
-def test_expect_fail_with_wrong_start(test_char):
+def test_expect_fail_with_special_chars(test_char):
     text_with_special = f"test_{test_char}_test"
     with pytest.raises(source.ForbiddenCharsError):
         validator.validate(MockDocument(text_with_special))

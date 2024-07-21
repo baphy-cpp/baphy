@@ -19,6 +19,14 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^6.0.0"
+pylint = "^3.2.5"
+black = "^24.4.2"
+poethepoet = "^0.27.0"
 
 [tool.poetry.scripts]
 baphy = "baphy.main:cli"
+
+[tool.poe.tasks]
+test = "poetry run pytest"
+format = "poetry run black ."
+lint = "poetry run pylint ./baphy/*"
