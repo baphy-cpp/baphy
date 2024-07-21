@@ -6,6 +6,7 @@ permissions: read-all
 
 jobs:
   pytest:
+    name: Pytest Runner
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
