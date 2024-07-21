@@ -1,3 +1,8 @@
+"""
+Module tests_project_info.test_project_name contains tests for the
+baphy.src.queries.project_name.NameValidator class.
+"""
+
 from dataclasses import dataclass
 
 import pytest
@@ -9,13 +14,17 @@ validator = source.NameValidator()
 
 @dataclass
 class MockDocument:
+    """
+    Mock class for testing purposes. Represents a document with a text field.
+    """
+
     text: str
 
 
-### Test checks that all valid names are passing validator
 @pytest.mark.parametrize(
-    "test_text",
+    "valid_name",
     [
+        # Valid names
         "flatcase",
         "UPPERCASE",
         "camelCase",
@@ -30,38 +39,44 @@ class MockDocument:
         "_startwithunderscore",
         "endwithunderscore_",
         "containing111numbers222",
+        # Empty string is also valid
         "",
     ],
 )
-def test_expect_valid_names(test_text):
+def test_valid_names(valid_name):
+    """
+    Test that all valid names are validated without any errors.
+    """
     try:
-        validator.validate(MockDocument(test_text))
-    except source.WrongStartError:
-        pytest.fail(
-            f"Expected text {test_text} to be valid but it contains wrong start"
-        )
-    except source.ForbiddenCharsError:
-        pytest.fail(
-            f"Expected text {test_text} to be valid but it contains forbidden characters"
-        )
+        # Validate the name
+        validator.validate(MockDocument(valid_name))
+    except source.ValidationError:
+        pytest.fail(f"Expected name {valid_name} to be valid, but validation failed")
 
 
-### Test checks that any start except letter or underscore is failing validation
 @pytest.mark.parametrize(
-    "test_text",
+    "name",
     ["-startwithslash", "1startwithnumber"],
 )
-def test_expect_fail_with_wrong_start(test_text):
+def test_invalid_names(name):
+    """
+    Test that names starting with non-letter or underscore raise WrongStartError.
+    """
     with pytest.raises(source.WrongStartError):
-        validator.validate(MockDocument(test_text))
+        validator.validate(MockDocument(name))
 
 
-### Test checks that all forbidden chars are failing validation
 @pytest.mark.parametrize(
-    "test_char",
+    "special_char",
     list("!@#$%^&*()+?=,<>/\"'"),
 )
-def test_expect_fail_with_special_chars(test_char):
-    text_with_special = f"test_{test_char}_test"
+def test_expect_fail_with_special_chars(special_char):
+    """
+    Test that any text with special characters is failing validation.
+    """
+    # Create a text with the special character
+    text_with_special_char = f"test_{special_char}_test"
+
+    # Validate the text with the special character
     with pytest.raises(source.ForbiddenCharsError):
-        validator.validate(MockDocument(text_with_special))
+        validator.validate(MockDocument(text_with_special_char))
