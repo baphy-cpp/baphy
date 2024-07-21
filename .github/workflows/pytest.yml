@@ -2,8 +2,11 @@ name: Pytest
 
 on: [push]
 
+permissions: read-all
+
 jobs:
-  ci:
+  pytest:
+    name: Pytest Runner
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -24,5 +27,5 @@ jobs:
           key: venv-${{ hashFiles('poetry.lock') }}
       - name: Install the project dependencies
         run: poetry install
-      - name: Run the automated tests (for example)
-        run: poetry run pytest -v
+      - name: Run the automated tests
+        run: poetry run poe test

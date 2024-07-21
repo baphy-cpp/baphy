@@ -28,5 +28,3 @@ baphy = "baphy.main:cli"
 
 [tool.poe.tasks]
 test = "poetry run pytest"
-format = "poetry run black ."
-lint = "poetry run pylint ./baphy/*"
