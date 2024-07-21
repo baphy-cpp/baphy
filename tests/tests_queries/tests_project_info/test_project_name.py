@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+
 import pytest
 
 import baphy.src.queries.project_name as source

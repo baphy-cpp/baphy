@@ -5,10 +5,9 @@
 import typer
 from typing_extensions import Annotated
 
-from .welcome import welcome
-from .template_engine import create_environment
-
 from .queries.project_name import query_project_info
+from .template_engine import create_environment
+from .welcome import welcome
 
 
 def main(
