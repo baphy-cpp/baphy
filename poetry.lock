@@ -90,22 +90,6 @@ jupyter = ["ipython (>=7.8.0)", "tokenize-rt (>=3.2.0)"]
 uvloop = ["uvloop (>=0.15.2)"]
 
 [[package]]
-name = "chuy"
-version = "1.4.0"
-description = "Set alias to long commands and speed up your workflow."
-optional = false
-python-versions = ">=3.7,<4.0"
-files = [
-    {file = "chuy-1.4.0-py3-none-any.whl", hash = "sha256:2fe7948f8f90c101bcfddc52e7e1ab873fca63024ad31defd5aeb39ad0d284dd"},
-    {file = "chuy-1.4.0.tar.gz", hash = "sha256:203e646b20fe8eb1029a11596323f4595e6869c3ec01a1782fd7abb702e36abc"},
-]
-
-[package.dependencies]
-colorama = ">=0.4.4,<0.5.0"
-colores = ">=0.1.0,<0.2.0"
-toml = ">=0.10.2,<0.11.0"
-
-[[package]]
 name = "click"
 version = "8.1.7"
 description = "Composable command line interface toolkit"
@@ -129,20 +113,6 @@ files = [
     {file = "colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"},
     {file = "colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"},
 ]
-
-[[package]]
-name = "colores"
-version = "0.1.2"
-description = "A Wrapper for Colorama"
-optional = false
-python-versions = ">=3.7,<4.0"
-files = [
-    {file = "colores-0.1.2-py3-none-any.whl", hash = "sha256:13e3a898da8c33ca851bb2e111a0df9e9f7a618f641cd268374501955f68949c"},
-    {file = "colores-0.1.2.tar.gz", hash = "sha256:0d3816d9384e3a22f8c587f7216166a96abf5c33e749d29a5606c831c273382c"},
-]
-
-[package.dependencies]
-colorama = ">=0.4.4,<0.5.0"
 
 [[package]]
 name = "dill"
@@ -619,4 +589,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "147f6d5238cb7f805ed299add44d006bcaf248246de045e1a842a8e5efcc0559"
+content-hash = "d9ffd1c4714f577ee06549aa71fd89f1e63ba0e515b2b8381ed4e318b10a4858"
