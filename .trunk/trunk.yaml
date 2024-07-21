@@ -19,6 +19,7 @@ lint:
   disabled:
     - taplo
   enabled:
+    - pylint@3.2.5
     - actionlint@1.7.1
     - bandit@1.7.9
     - black@24.4.2
