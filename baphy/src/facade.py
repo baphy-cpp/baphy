@@ -17,10 +17,6 @@ def main(
         typer.Argument(help="Name of directory/project to create", show_default=False),
     ]
 ):
-    """
-    TODO: Description of a tool
-    """
-
     # env = create_environment()
 
     # p = pathlib.Path("smth/")

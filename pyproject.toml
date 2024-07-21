@@ -11,6 +11,8 @@ typer = "^0.12.3"
 questionary = "^2.0.1"
 rich = "^13.7.1"
 jinja2 = "^3.1.4"
+pydantic = "^2.8.2"
+rgbprint = "^4.0.2"
 
 
 [build-system]

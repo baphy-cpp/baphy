@@ -1,8 +1,8 @@
 """
-Module contains functions for greeting user
+Module contains functions for welcoming user
 """
 
-import rich
+from rgbprint import gradient_print
 
 
 def welcome():
@@ -10,5 +10,10 @@ def welcome():
     Rich-print welcoming message
     """
 
-    # TODO: Welcoming message
-    rich.print("[u cyan]Welcome[/]")
+    print("\033[1m", end="")
+    gradient_print(
+        "Baphy - C++ project setup made easy",
+        start_color=0x3398DB,
+        end_color=0xDB3398,
+    )
+    print("\033[0m")

@@ -6,6 +6,11 @@
     "**/CVS": true,
     "**/.DS_Store": true,
     "**/Thumbs.db": true,
+    "**/.trunk/*actions/": true,
+    "**/.trunk/*logs/": true,
+    "**/.trunk/*notifications/": true,
+    "**/.trunk/*out/": true,
+    "**/.trunk/*plugins/": true,
     "baphy/__init__.py": true,
     "baphy/__pycache__": true,
     ".vscode": true,
@@ -31,8 +36,5 @@
     "tests/test_example/__pycache__",
     ".pytest_cache"
   ],
-  "python.analysis.extraPaths": [
-    "./baphy/src",
-    "./baphy"
-  ]
+  "python.analysis.extraPaths": ["./baphy/src", "./baphy"]
 }
