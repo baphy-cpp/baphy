@@ -1,0 +1,29 @@
+cmake_minimum_required(VERSION 3.30)
+
+# -------------- Project information -------------
+
+project({{ project_name }}
+    VERSION 0.1.0
+    {% if project_description %}
+    DESCRIPTION {{ project_description }}
+    {% endif %}
+    LANGUAGES CXX
+)
+
+# -------------- Declare executable --------------
+
+add_executable({{ executable_name }}
+    src/main.cpp
+)
+
+add_executable({{ alias_executable_name }}
+    ALIAS {{ executable_name }}
+)
+
+set_property(TARGET {{ executable_name }} PROPERTY
+    OUTPUT_NAME {{ project_name }}
+)
+
+target_compile_features({{ executable_name }} PRIVATE
+    cxx_std_20
+)
