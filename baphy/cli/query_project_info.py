@@ -1,13 +1,5 @@
 """
-Module contains a function to query the user for the project name.
-
-Also it contains a class to validate the project name.
-The class has a single method "validate" which is used
-to validate the project name based on the rules:
-  - The name must begin with a letter or an underscore (_)
-  - The name can't contain whitespace or special characters like !, #, %, etc.
-
-The class raises a ValidationError if the name is invalid.
+Module contains a functionality to query the user for the project name.
 """
 
 import questionary

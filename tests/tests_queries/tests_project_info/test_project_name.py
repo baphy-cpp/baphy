@@ -5,9 +5,8 @@ baphy.src.queries.project_name.NameValidator class.
 
 from dataclasses import dataclass
 
+import cli.query_project_info as source
 import pytest
-
-import baphy.src.queries.project_name as source
 
 validator = source.NameValidator()
 

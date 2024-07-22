@@ -1,5 +1,5 @@
 """
-Module contains functions for welcoming user
+Module contains functions for welcoming user.
 """
 
 from rgbprint import gradient_print
